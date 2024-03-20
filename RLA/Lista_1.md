@@ -63,8 +63,8 @@ flowchart TD
 A([ínicio])-->B{{"digite o salario atual"}}
 B-->C[/X/]
 C-->D{X<=500}
-D--sim-->E[S=X+X*20%]
-D--não -->F[S=X+X*10%]
+D--sim-->E["S=X+(X*20%)"]
+D--não -->F["S=X+(X*10%)"]
 E-->G{{salario final==S}}
 F-->G
 G-->H([fim])
@@ -88,6 +88,11 @@ FIM_ALGORITMO.
 
 
 #### Teste de mesa (1.0 ponto)
+|salário atual|x>500|x<=500|salário final|
+|--|--|--|--|
+|450|/|450+(450*20%)|540|
+|670|670+(670*10%)|/|737|
+|500|/|500+(500*20%)|600|
 
 
 
@@ -114,8 +119,7 @@ G-->Z
 DECLARE N1, N2, M NÚMERICO
 ESCREVA "DIGITE DOIS NÚMEROS"
 LEIA N1,N2
-soma ⇐N1+N2
-M=soma//2
+M⇐(N1+N2)/2
 ESCREVA "MÈDIA="M
 SE M>=6 ENTÃO
  ESCREVA "APROVADO"
@@ -123,8 +127,11 @@ SENÃO ESCREVA "REPROVADO"
 FIM_ALGARITMO
 ```
 #### Teste de mesa (1 ponto)
-
-
+|nota1|nota2|média|resultado|
+|--|--|--|--|
+|5|8|6.5|"você está aprovado!"|
+|7|3|5|"você foi reprovado!"|
+|7|7|7|"você está aprovado!"|
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
 Caso não atender a restrição de idade, calcular quantos anos faltam para o candidato estar apto.
@@ -146,7 +153,7 @@ G-->Z
 
 ```
 ALGORITMO
-DECLARE X NUMÉRICO
+DECLARE X, F NUMÉRICO
 ESCREVA"DIGITE A IDADE DO CANDIDATO"
 LEIA X
 SE X>=18 ENTÃO
