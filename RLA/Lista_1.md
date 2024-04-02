@@ -27,18 +27,44 @@ I --> Z
 #### Pseudocódigo (0,5 ponto)
 ```
 1  ALGORTIMO verifica_par_impar
+
+   // Receber número inteiro para verificar par_impar
 2  DECLARE numero, resto: INTEIRO
+
+   // Exibe a mensagem para entrada de dados
 3  ESCREVA "Digite um número: "
+
+
 4  INICIO
+
+   // Armazena a entrada do usuário
 4  LEIA numero
-5  SE numero >= 0 ENTAO                  // verifica se o inteiro é positivo
-6    resto = numero % 2                 // calcula o resto da divisão por 2
-7    SE resto == 0 ENTAO                // verifica se o resto é igual a zero
+
+   // verifica se o inteiro é positivo
+5  SE numero >= 0 ENTAO
+
+     // calcula o resto da divisão por 2             
+6    resto = numero % 2
+
+     // verifica se o resto é igual a zero            
+7    SE resto == 0 ENTAO
+
+       // exibir a mensagem        
 8      ESCREVA "O número é par!"
+
+     // estrutura condicional
 9    SENAO
+
+       // exibir mensagem
 10     ESCREVA "O número é impar!"
+
+     // fim estrutura condicional
 11   FIM_SE
-11  SENAO                                // caso inteiro for negativo (condição linha 5)
+
+    // caso o numero nao faça parte da estrutura 
+11  SENAO
+
+      // Exibir mensagem                          
 12    ESCREVA "O número deve ser postivo!"
 13  FIM_SE
 13 FIM
@@ -75,12 +101,26 @@ G-->H([fim])
 
 ```
 Algoritmo ContaAprovacoes
+
+// Receber valor do salario
 DECLARE X, S NUMÉRICO
+
+// Exibir a mensagem para entrada de dados
 ESCREVA "DIGITE O SALÁRIO ATUAL"
+
+// Armazenar a entrada de dados
 LEIA X
+
+// Estrutura condicional 
 SE X<=500 ENTÃO
+
+ // calcular estrutura condicional
  S⇐X+(X*20%)
+
+// caso a estrutura passada nao seja condizente, fazer novo calculo
 SENÃO S⇐X+(X*10% )
+
+// Exibir resultado final do algoritmo
 ESCREVA "SALÁRIO FINAL=" S
 FIM_ALGORITMO.
 ```
@@ -115,14 +155,30 @@ G-->Z
 
 #### Pseudocódigo (1 ponto)
 
-```ALGORITMO 
+```ALGORITMO
+
+// Receber valores 
 DECLARE N1, N2, M NÚMERICO
+
+// exibir a mensagem para entrada de dados
 ESCREVA "DIGITE DOIS NÚMEROS"
+
+// Armazenar a entrada dos valores
 LEIA N1,N2
+
+// realizar o calculo da media
 M⇐(N1+N2)/2
+
+// Exibir o valor da media
 ESCREVA "MÈDIA="M
+
+// Estrutura condicional
 SE M>=6 ENTÃO
+
+ // Exibir resultado
  ESCREVA "APROVADO"
+
+// Exibir resultado de condicional
 SENÃO ESCREVA "REPROVADO"
 FIM_ALGARITMO
 ```
@@ -153,12 +209,26 @@ G-->Z
 
 ```
 ALGORITMO
+
+// Receber dados 
 DECLARE X, F NUMÉRICO
+
+// Exibir a mensagem para entrada de dados
 ESCREVA"DIGITE A IDADE DO CANDIDATO"
+
+// Armazenar a entrada do usuario
 LEIA X
+
+// Estrutura condicional, caso o candidato tenha 18 anos ou mais
 SE X>=18 ENTÃO
+
+ // Exibir a mensagem 
  ESCREVA "PODE TIRAR CNH"
+
+// estrutura condicional Caso o candidato nao tenha idade suficiente
 SENÃO F⇐18-X
+
+// Exibir mensagem
 ESCREVA "FALTAM"F"ANO(s) PARA PODER TIRAR CNH" 
 FIM_ALGORITMO
 ```
