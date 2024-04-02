@@ -24,15 +24,33 @@ J --> I
 #### Pseudocódigo
 ```
 1  ALGORITMO calReajuste
+
+   // Receber dados
 2  DECLARE  sal, sal_reaj: real, prof: caractere
+
 3  INICIO
+
+   // Armazenar a entrada do usuario
 4  LEIA sal, prof
+
+   
 5  ESCOLHA
-6   CASO prof == “Técnico”		// caso 1
+    // caso a condicional indique o cargo, realizar calculo
+6   CASO prof == “Técnico”
+
+      // calculo para cargo de tecnico
 7     sal_reaj ← 1.5 * sal
-8   CASO prof = “Gerente”		// caso 2
+
+    // condicao caso o professor seja gerente
+8   CASO prof = “Gerente”
+
+      // realizar calculo de cargo de gerente
 9     sal_reaj ← 1.3 * sal
+
+    // estrutura condicional caso nao seja gerente e tecnico
 10  SENÃO
+
+      // calculo do reajuste
 11    sal_reaj ← 1.1 * sal
 12 FIM_ESCOLHA
 13 ESCREVA “Salário Reajustado = “, sal_reaj
@@ -66,11 +84,22 @@ F-->Z([fim])
 
 ```
 ALGORITMO calcmédia
+
+// Receber numeros inteiros
 DECLARE X1, X2 , X3, X4, M NÚMERICO INTEIRO
+
 INÍCIO
-ESCREVA"DIGITE QUATRO NOTAS DE AVALIAÇÕES "
+
+// Exibir mensagem para entrada de dados
+ESCREVA "DIGITE QUATRO NOTAS DE AVALIAÇÕES "
+
+// Armazenar a entrada do usuario
 LEIA X1, X2, X3, X4
+
+// calcular a media
 M<--(X1+X2+X3+X4)/4
+
+// Exibir mensagem
 ESCREVA"MÉDIA="M
 FIM_ALGORITMO
 ```
@@ -102,11 +131,22 @@ E-->Z([Fim])
 
 ```
 ALGORITMO calctemperatura
+
+// Receber dados
 DECLARE c, F NÚMERICO
+
 INÍCIO
+
+// Exibir mensagem para entrada de dados
 ESCREVA "digite a temperatura em Celsius"
+
+// Armazenar a entrada do usuario
 LEIA c
+
+// calculo da funcao
 F<--(9/5*c)+32
+
+// Exibir mensagem
 ESCREVA "Temperatura em Fahrenheit é de" F
 FIM_ALGORITMO
 ```
@@ -152,24 +192,26 @@ H --> Z([FIM])
 
 ```
 1 ALGORITMO calculadora
-2 DECLARE X1, X2: real
-3	op: caractere
+
+
+2 DECLARE X1, X2: real                                             // Receber dados
+3	op: caractere                                             // dados da operacao
 4 INÍCIO
-5 ESCREVA "Digite dois números: "
-6 LEIA X1, X2
-7 ESCREVA "Escolha uma das operações [+][-][*][/]: "
-8 LEIA op
-9     CASO op == +
-10    CALCULE res = X1 + X2
-11      CASO op == -
-        CALCULE res = X1 - X2
-          CASO op == *
-          CALCULE res = X1 * X2
-            SENÃO OP == /
-              SE X2!= 0
-              CALCULE res = X1 / X2
-              SENÃO ESCREVA"Digite um número maior que zero"
-              CALCULE res =X1 / X2   
+5 ESCREVA "Digite dois números: "                                // Exibir mensagem para entrada de dados 
+6 LEIA X1, X2                                                   // Armazena a entrada 
+7 ESCREVA "Escolha uma das operações [+][-][*][/]: "           // Exibir a mensagem para escolher a operacao
+8 LEIA op                                                      // Armazenar operacal escolhida
+9     CASO op == +                                              // caso a operacao seja de adicao
+10    CALCULE res = X1 + X2                                       // calcular a operacao de adicao
+11      CASO op == -                                             // caso a operacao seja de subtracao
+        CALCULE res = X1 - X2                                     // calcular a operacao de subtracao
+          CASO op == *                                            // caso a operacao seja de multiplicacao
+          CALCULE res = X1 * X2                                          // calcular resultado da multiplicacao
+            SENÃO OP == /                                               // caso a operacao nao seja nenhuma das linhas anteriores, realizar operacao de divisao
+              SE X2!= 0                                                // x2 precisa ser diferente de 0 para realizar a operacao
+              CALCULE res = X1 / X2                                   // calcular a operacao de divisao
+              SENÃO ESCREVA"Digite um número maior que zero"         // caso x2 seja igual a zero, pedir numero maior que zero
+              CALCULE res =X1 / X2                                   // calcular divisao
 FIM_SE
 FIM_ESCOLHA
 FIM_ALGORITMO
@@ -213,22 +255,22 @@ E-->Z
 
 ```
 ALGORITMO classificação
-DECLARE x NÚMERICO INTEIRO
-INÍCIO
-ESCREVA "digite a idade do nadador"
-LEIA x
+DECLARE x NÚMERICO INTEIRO                                                  // Receber numero inteiro
+INÍCIO  
+ESCREVA "digite a idade do nadador"                                        // Exibir mensagem para entrada de dados
+LEIA x                                                                     // Armazena a entrada do usuario
 ESCOLHA
-  CASO 5<=x<=7
-  ESCREVA "o nadador é classificado na categoria de infantil A."
-  CASO 8<=x<=10
-  ESCREVA "o nadador é classificado na categoria de infantil B."
-  CASO 11<=x<=13
-  ESCREVA "o nadador é classificado na categoria de juvenil A."
-  CASO 14<=x<=17
-  ESCREVA "o nadador é classificado na categoria de juvenil B."
-  SENÃO
-  x>18
-  ESCREVA "o nadador é classificado na categoria de adulto."
+  CASO 5<=x<=7                                                              // condicao para classificacao
+  ESCREVA "o nadador é classificado na categoria de infantil A."           // Exibir mensagem de classificacao
+  CASO 8<=x<=10                                                            // condicao para classificacao
+  ESCREVA "o nadador é classificado na categoria de infantil B."           // Exibir mensagem de classificacao
+  CASO 11<=x<=13                                                           // condicao para classificacao
+  ESCREVA "o nadador é classificado na categoria de juvenil A."            // Exibir mensagem de classificacao
+  CASO 14<=x<=17                                                           // condicao para classificacao
+  ESCREVA "o nadador é classificado na categoria de juvenil B."            // Exibir mensagem de classificacao
+  SENÃO                                                                    // caso o nadador ainda nao tenha classificacao
+  x>18                                                                     // nadador maior 18 anos
+  ESCREVA "o nadador é classificado na categoria de adulto."               // Exibir mensagem
 FIM_ESCOLHA
 FIM_ALGORITIMO
 ```
