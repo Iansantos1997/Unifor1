@@ -102,26 +102,26 @@ G-->H([fim])
 ```
 Algoritmo ContaAprovacoes
 
-// Receber valor do salario
-DECLARE X, S NUMÉRICO
+   // Receber valor do salario
+   DECLARE X, S NUMÉRICO
 
-// Exibir a mensagem para entrada de dados
-ESCREVA "DIGITE O SALÁRIO ATUAL"
+   // Exibir a mensagem para entrada de dados
+   ESCREVA "DIGITE O SALÁRIO ATUAL"
 
-// Armazenar a entrada de dados
-LEIA X
+   // Armazenar a entrada de dados
+   LEIA X
 
-// Estrutura condicional 
-SE X<=500 ENTÃO
+      // Estrutura condicional 
+      SE X<=500 ENTÃO
 
- // calcular estrutura condicional
- S⇐X+(X*20%)
+          // calcular estrutura condicional
+          S⇐X+(X*20%)
 
-// caso a estrutura passada nao seja condizente, fazer novo calculo
-SENÃO S⇐X+(X*10% )
+      // caso a estrutura passada nao seja condizente, fazer novo calculo
+      SENÃO S⇐X+(X*10% )
 
-// Exibir resultado final do algoritmo
-ESCREVA "SALÁRIO FINAL=" S
+   // Exibir resultado final do algoritmo
+   ESCREVA "SALÁRIO FINAL=" S
 FIM_ALGORITMO.
 ```
 
@@ -157,23 +157,23 @@ G-->Z
 
 ```ALGORITMO
 
-// Receber valores 
-DECLARE N1, N2, M NÚMERICO
+   // Receber valores 
+   DECLARE N1, N2, M NÚMERICO
 
-// exibir a mensagem para entrada de dados
-ESCREVA "DIGITE DOIS NÚMEROS"
+      // exibir a mensagem para entrada de dados
+      ESCREVA "DIGITE DOIS NÚMEROS"
 
-// Armazenar a entrada dos valores
-LEIA N1,N2
+      // Armazenar a entrada dos valores
+      LEIA N1,N2
 
-// realizar o calculo da media
-M⇐(N1+N2)/2
+      // realizar o calculo da media
+      M⇐(N1+N2)/2
 
-// Exibir o valor da media
-ESCREVA "MÈDIA="M
+   // Exibir o valor da media
+   ESCREVA "MÈDIA="M
 
-// Estrutura condicional
-SE M>=6 ENTÃO
+   // Estrutura condicional
+   SE M>=6 ENTÃO
 
  // Exibir resultado
  ESCREVA "APROVADO"
@@ -219,14 +219,14 @@ ESCREVA"DIGITE A IDADE DO CANDIDATO"
 // Armazenar a entrada do usuario
 LEIA X
 
-// Estrutura condicional, caso o candidato tenha 18 anos ou mais
-SE X>=18 ENTÃO
+   // Estrutura condicional, caso o candidato tenha 18 anos ou mais
+   SE X>=18 ENTÃO
 
- // Exibir a mensagem 
- ESCREVA "PODE TIRAR CNH"
+       // Exibir a mensagem 
+       ESCREVA "PODE TIRAR CNH"
 
-// estrutura condicional Caso o candidato nao tenha idade suficiente
-SENÃO F⇐18-X
+   // estrutura condicional Caso o candidato nao tenha idade suficiente
+   SENÃO F⇐18-X
 
 // Exibir mensagem
 ESCREVA "FALTAM"F"ANO(s) PARA PODER TIRAR CNH" 
