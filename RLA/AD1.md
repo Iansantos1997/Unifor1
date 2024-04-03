@@ -73,16 +73,16 @@ I --> J{{"b =", b}}
 ```
 Algoritmo TrocaValores
 INÍCIO
-DECLARE a, b, aux NÚMERICO
-ESCREVA "Digite o valor da a:"
-LEIA a
-ESCREVA "Digite o valor da b:"
-LEIA b
-aux <-- a
-a <-- b
-b <-- aux
-ESCREVA "a ="a
-ESCREVA "b ="b
+DECLARE a, b, aux NÚMERICO          // Receber variaveis a, b e aux
+ESCREVA "Digite o valor da a:"      // Exibir mensagem para entrada de dados
+LEIA a                               // Armazena a entrada do usuario
+ESCREVA "Digite o valor da b:"        // Exibir mensagem para entrada de dados
+LEIA b                                 // Armazena a entrada do usuario
+aux <-- a                              // variavel aux inicializada com valor de a
+a <-- b                                 // variavel a inicializada com valor de b
+b <-- aux                               // variavel b inicializada com valor de aux
+ESCREVA "a ="a                          // Exibir mensagem de saida
+ESCREVA "b ="b                          // exibir mensagem de saida
 FIM_ALGORITMO
 ```
 
@@ -150,24 +150,24 @@ J --LOOP--> E
 
 ```
 Algoritmo ContaAprovacoes
-DECLARE n, i, cont: NÚMERICO
-ESCREVA "Digite o número de alunos"
-LEIA n
+DECLARE n, i, cont: NÚMERICO           // Receber variaveis
+ESCREVA "Digite o número de alunos"    // Exibir mensagem para entrada de dados
+LEIA n                                 // Armazena entrada do usuario
 INÍCIO
-cont <--0
-LEIA cont
-i<--1
-LEIA i
-SE i<=n ENTÃO
-ESCREVA "Digite a nota do aluno,"i
-LEIA nota
-  SE nota >=500 E nota<=100 ENTÃO
-  cont <-- +1
-  i<-- +1
-  SENÃO
-  i<-- +1
-SENÃO
-ESCREVA "Número de alunos aprovados:"cont
+cont <--0                              // contagem comecando em zero
+LEIA cont                               // armazena a entrada
+i<--1                                   // variavel i inicializada com valor de 1
+LEIA i                                  // armazena o valor de i igual a 1
+SE i<=n ENTÃO                             // variavel condicional
+ESCREVA "Digite a nota do aluno,"i         // exibir mensagem de saida
+LEIA nota                                 // armazena a entrada da linha anterior
+  SE nota >=500 E nota<=100 ENTÃO         // variavel condicional para determinar aprovacao
+  cont <-- +1                               // variavel inicializada com soma de +1 (aprovados)
+  i<-- +1                                     // variavel inicializada com soma de +1
+  SENÃO                                      // variavel condicional, caso o aluno nao seja aprovado
+  i<-- +1                                    // variavel sendo adicionada de +1 para total de alunos
+SENÃO                                         // variavel condicional para aprovacao
+ESCREVA "Número de alunos aprovados:"cont     // exibir mensagem de aprovacao
 FIM_SE
 FIM_ALGORITMO
 ```
@@ -230,26 +230,26 @@ K --LOOP--> G
 
 ```
 Algoritmo SomaNumeros
-DECLARE n, i, num, soma: NÚMERICO
-ESCREVA "Digite a quantidade de números (n >= 0):"
-LEIA n
+DECLARE n, i, num, soma: NÚMERICO                           // Receber variaveis
+ESCREVA "Digite a quantidade de números (n >= 0):"          // Exibir mensagem para entrada de dados
+LEIA n                                                     // Armazenr a entrada do usuario
 INICIO
-SE n>=0 ENTÃO
-soma<--0
-i<--1
-LEIA i
-SE i <= n ENTÃO
-  REPITA  
-    ESCREVA "Digite um número:"
-    LEIA num
-    soma <-- +num
-    LEIA soma
-    i<-- +1
-    ATE_QUE i > n
-  SENÃO
-  ESCREVA "A soma dos numeros é ,"soma
-SENÃO
-ESCREVA "O valor deve ser maior ou igual a zero!"
+SE n>=0 ENTÃO                                             // condicional n maior ou igual a zero
+soma<--0                                                     // variavel soma inicializada com valor de zero
+i<--1                                                         // variavel 1 inicializada com 1
+LEIA i                                                     // Armazena a variavel i
+SE i <= n ENTÃO                                              // variavel condicional
+  REPITA                                                      // variavel para inicializar operacao para i maior que n
+    ESCREVA "Digite um número:"                               // exibir mensagem para entrada de dados
+    LEIA num                                                 // armazenar entrada de dados
+    soma <-- +num                                             // variavel soma inicializada com soma de numero digitado pelo usuario
+    LEIA soma                                                 // armazenar a entrada de soma
+    i<-- +1                                                     // variavel i inicializada com +1
+    ATE_QUE i > n                                              // variavel condicional ate que 1 seja maior que n
+  SENÃO                                                         // estrutura condicional
+  ESCREVA "A soma dos numeros é ,"soma                             // exibir mensagem
+SENÃO                                                            //estrutura condicional
+ESCREVA "O valor deve ser maior ou igual a zero!"                 // exibir mensagem
 FIM_SE
 FIM_QUE
 FIM_ALGORITIMO
@@ -305,21 +305,21 @@ I --LOOP--> E
 ```
 Algoritmo SomaSerie
 
-DECLARE n, i, S,numerador, denominador, termo: NÚMERICO
-ESCREVA "Digite o número de termos da série S:"
-LEIA n
+DECLARE n, i, S,numerador, denominador, termo: NÚMERICO         // receber variaveis
+ESCREVA "Digite o número de termos da série S:"                  // exibir mensagem para entrada de dados
+LEIA n                                                             // armazena a entrada do usuario
 INÍCIO
-S <-- 0
-LEIA S
-PARA <i> DE <0> ATE <n> [PASSO1] FAÇA
-LEIA i
-numerador <-- 2*i+1
-LEIA numerador
-denominador <-- 2*i+2
-LEIA denominador
-termo <-- numerador/denominador
-LEIA termo
-S <-- termo
+S <-- 0                                                             // variavel S inicializada com valor 0
+LEIA S                                                             // armazena o valor da variavel s
+PARA <i> DE <0> ATE <n> [PASSO1] FAÇA                               // estrutura condicional
+LEIA i                                                             // armazena a entrada de i
+numerador <-- 2*i+1                                                 // variavel numerador inicializada com funcao
+LEIA numerador                                                      // armazena a entrada de numerador
+denominador <-- 2*i+2                                             // variavel inicializada com funcao
+LEIA denominador                                                 // armazena o valor de denominador
+termo <-- numerador/denominador                                     // variavel termo inicializada por funcao
+LEIA termo                                                         // armazenar valor de funcao termo
+S <-- termo                                                         // variavel S inicializada pelo valor de termo
 FIM_PARA
 ESCREVA "Soma da série S é ," S
 FIM_ALGORITMO
@@ -368,20 +368,20 @@ H --> I
 
 ```
 Algoritmo CalcFatorial
-DECLARE n, i, fator: NÚMERICO
-ESCREVA "Digite um numero inteiro nao-negativo:"
-LEIA n
+DECLARE n, i, fator: NÚMERICO                         // Receber variaveis
+ESCREVA "Digite um numero inteiro nao-negativo:"      // exibir mensagem para entrada de dados 
+LEIA n                                                // armazena variavel n
 INICIO
-SE n >= 0 ENTÃO
-fator <-- 1
+SE n >= 0 ENTÃO                                         // estrutura condicional
+fator <-- 1                                             // variavel inicializada com valor de 1
 PARA <i> DE <1> ATE n PASSO <1> FAÇA
-LEIA i
-fator <-- fator * i
-LEIA fator
+LEIA i                                                 // armazenar variavel i
+fator <-- fator * i                                     // variavel inicializada pela funcao
+LEIA fator                                             // armazena variavel fator
 FIM_PARA
-ESCREVA 'O fatorial de, n, é:" fator
-SENÃO 
-ESCREVA "O valor deve ser maior ou igual a zero!"
+ESCREVA 'O fatorial de, n, é:" fator                   // exibir mensagem 
+SENÃO                                                  // estrutura condicional
+ESCREVA "O valor deve ser maior ou igual a zero!"      // exibir mensagem
 FIM_SE
 FIM_ALGORITMO
 ```
@@ -430,18 +430,18 @@ K --LOOP--> F
 
 ```
 Algoritmo GeraFibonacci
-DECLARE ntermos, n, i, a, b, termo_atual
-ESCREVA "Número de termos da série Fibonacci:"
-LEIA ntermos, a, b
+DECLARE ntermos, n, i, a, b, termo_atual               // receber variaveis
+ESCREVA "Número de termos da série Fibonacci:"         // exibir mensagem
+LEIA ntermos, a, b                                     // armazenar variaveis
 INICIO
-a <-- 0
-b <-- 1
+a <-- 0                                               // variavel a inicializada com valor de zero
+b <-- 1                                               // variavel b inicializada com valor de um
 PARA <i> DE <1> ATE <n> PASSO <1> FAÇA
-ESCREVA "a"
-termo_atual <-- a + b
-LEIA termo_atual
-a <-- b
-b <-- termo_atual
+ESCREVA "a"                                           // exibir mensagem
+termo_atual <-- a + b                                 // variavel termo inicializada pela funcao a + b
+LEIA termo_atual                                     // armazena a variavel termo atual
+a <-- b                                              // variavel a agora com valor de b
+b <-- termo_atual                                     // variavel b agora com valor de termo_atual
 FIM_PARA
 FIM_ALGORITIMO
 ```
@@ -492,20 +492,20 @@ E --> W
 
 ```
 Algoritmo InverteInteiro
-DECLARE num, digito, num_inv: NÚMERICO
-ESCREVA "Digite um número inteiro:"
-LEIA num
+DECLARE num, digito, num_inv: NÚMERICO                 // receber variaveis
+ESCREVA "Digite um número inteiro:"                   // exibir mensagem para entrada de dados
+LEIA num                                              // armazenar a entrada do usuario
 INICIO
-SE num >= 0 ENTÃO
-  num_inv <-- 0
-  ENQUANTO num > 0 FAÇA
-  digito <-- num % 10
-  num_inv <-- num_inv*10 + digito
-  num <-- num//10
+SE num >= 0 ENTÃO                                     // variavel condicional
+  num_inv <-- 0                                        // variavel inicializada com valor de zero
+  ENQUANTO num > 0 FAÇA                                 // variavel num maior que zero
+  digito <-- num % 10                                 // variavel inicializada pela funcao resto da divisao
+  num_inv <-- num_inv*10 + digito                     // variavel inicializada pela funcao
+  num <-- num//10                                     // variavel incializada pela funcao de divisao inteiro
 FIM_ENQUANTO
-ESCREVA "Número invertido:", numero_inv
+ESCREVA "Número invertido:", numero_inv               // exibir mensagem de saida de dados
 SENÃO
-ESCREVA "O número deve ser positivo!"
+ESCREVA "O número deve ser positivo!"                 // exibir mensagem de saida de dados
 FIM_SE
 FIM_ALGORITMO
 
