@@ -305,13 +305,13 @@ I --LOOP--> E
 ```
 Algoritmo SomaSerie
 
-DECLARE n, i, S,numerador, denominador, termo: NÚMERICO         // receber variaveis
-ESCREVA "Digite o número de termos da série S:"                  // exibir mensagem para entrada de dados
-LEIA n                                                             // armazena a entrada do usuario
-INÍCIO
-S <-- 0                                                             // variavel S inicializada com valor 0
-LEIA S                                                             // armazena o valor da variavel s
-PARA <i> DE <0> ATE <n> [PASSO1] FAÇA                               // estrutura condicional
+ DECLARE n, i, S,numerador, denominador, termo: NÚMERICO         // receber variaveis
+ ESCREVA "Digite o número de termos da série S:"                  // exibir mensagem para entrada de dados
+ LEIA n                                                             // armazena a entrada do usuario
+ INÍCIO
+ S <-- 0                                                             // variavel S inicializada com valor 0
+ LEIA S                                                             // armazena o valor da variavel s
+ PARA <i> DE <0> ATE <n> [PASSO1] FAÇA                               // estrutura condicional
     LEIA i                                                             // armazena a entrada de i
     numerador <-- 2*i+1                                                 // variavel numerador inicializada com funcao
     LEIA numerador                                                      // armazena a entrada de numerador
@@ -320,9 +320,9 @@ PARA <i> DE <0> ATE <n> [PASSO1] FAÇA                               // estrutur
     termo <-- numerador/denominador                                     // variavel termo inicializada por funcao
     LEIA termo                                                         // armazenar valor de funcao termo
     S <-- termo                                                         // variavel S inicializada pelo valor de termo
-FIM_PARA
-ESCREVA "Soma da série S é ," S
-FIM_ALGORITMO
+ FIM_PARA
+ ESCREVA "Soma da série S é ," S
+ FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.25 ponto)
