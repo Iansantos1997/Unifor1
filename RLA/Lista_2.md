@@ -90,17 +90,17 @@ DECLARE X1, X2 , X3, X4, M NÚMERICO INTEIRO
 
 INÍCIO
 
-// Exibir mensagem para entrada de dados
-ESCREVA "DIGITE QUATRO NOTAS DE AVALIAÇÕES "
+   // Exibir mensagem para entrada de dados
+   ESCREVA "DIGITE QUATRO NOTAS DE AVALIAÇÕES "
 
-// Armazenar a entrada do usuario
-LEIA X1, X2, X3, X4
+   // Armazenar a entrada do usuario
+   LEIA X1, X2, X3, X4
 
-// calcular a media
-M<--(X1+X2+X3+X4)/4
+   // calcular a media
+   M<--(X1+X2+X3+X4)/4
 
-// Exibir mensagem
-ESCREVA"MÉDIA="M
+   // Exibir mensagem
+   ESCREVA"MÉDIA="M
 FIM_ALGORITMO
 ```
 
@@ -137,17 +137,17 @@ DECLARE c, F NÚMERICO
 
 INÍCIO
 
-// Exibir mensagem para entrada de dados
-ESCREVA "digite a temperatura em Celsius"
+   // Exibir mensagem para entrada de dados
+   ESCREVA "digite a temperatura em Celsius"
 
-// Armazenar a entrada do usuario
-LEIA c
+   // Armazenar a entrada do usuario
+   LEIA c
 
-// calculo da funcao
-F<--(9/5*c)+32
+   // calculo da funcao
+   F<--(9/5*c)+32
 
-// Exibir mensagem
-ESCREVA "Temperatura em Fahrenheit é de" F
+   // Exibir mensagem
+   ESCREVA "Temperatura em Fahrenheit é de" F
 FIM_ALGORITMO
 ```
 
