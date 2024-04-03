@@ -312,14 +312,14 @@ INÍCIO
 S <-- 0                                                             // variavel S inicializada com valor 0
 LEIA S                                                             // armazena o valor da variavel s
 PARA <i> DE <0> ATE <n> [PASSO1] FAÇA                               // estrutura condicional
-LEIA i                                                             // armazena a entrada de i
-numerador <-- 2*i+1                                                 // variavel numerador inicializada com funcao
-LEIA numerador                                                      // armazena a entrada de numerador
-denominador <-- 2*i+2                                             // variavel inicializada com funcao
-LEIA denominador                                                 // armazena o valor de denominador
-termo <-- numerador/denominador                                     // variavel termo inicializada por funcao
-LEIA termo                                                         // armazenar valor de funcao termo
-S <-- termo                                                         // variavel S inicializada pelo valor de termo
+    LEIA i                                                             // armazena a entrada de i
+    numerador <-- 2*i+1                                                 // variavel numerador inicializada com funcao
+    LEIA numerador                                                      // armazena a entrada de numerador
+    denominador <-- 2*i+2                                             // variavel inicializada com funcao
+    LEIA denominador                                                 // armazena o valor de denominador
+    termo <-- numerador/denominador                                     // variavel termo inicializada por funcao
+    LEIA termo                                                         // armazenar valor de funcao termo
+    S <-- termo                                                         // variavel S inicializada pelo valor de termo
 FIM_PARA
 ESCREVA "Soma da série S é ," S
 FIM_ALGORITMO
